@@ -1,0 +1,99 @@
+PODS:
+  - agora_rtc_engine (0.0.1):
+    - AgoraIrisRTC_macOS (= 4.1.0-rc.2)
+    - AgoraRtcEngine_macOS (= 4.1.0)
+    - FlutterMacOS
+  - AgoraIrisEventFlutter_macOS (2.0.0)
+  - AgoraIrisRTC_macOS (4.1.0-rc.2)
+  - AgoraRtcEngine_macOS (4.1.0):
+    - AgoraRtcEngine_macOS/AIAEC (= 4.1.0)
+    - AgoraRtcEngine_macOS/AINS (= 4.1.0)
+    - AgoraRtcEngine_macOS/AudioBeauty (= 4.1.0)
+    - AgoraRtcEngine_macOS/ClearVision (= 4.1.0)
+    - AgoraRtcEngine_macOS/ContentInspect (= 4.1.0)
+    - AgoraRtcEngine_macOS/DRM (= 4.1.0)
+    - AgoraRtcEngine_macOS/RtcBasic (= 4.1.0)
+    - AgoraRtcEngine_macOS/SpatialAudio (= 4.1.0)
+    - AgoraRtcEngine_macOS/VirtualBackground (= 4.1.0)
+    - AgoraRtcEngine_macOS/VQA (= 4.1.0)
+  - AgoraRtcEngine_macOS/AIAEC (4.1.0)
+  - AgoraRtcEngine_macOS/AINS (4.1.0)
+  - AgoraRtcEngine_macOS/AudioBeauty (4.1.0)
+  - AgoraRtcEngine_macOS/ClearVision (4.1.0)
+  - AgoraRtcEngine_macOS/ContentInspect (4.1.0)
+  - AgoraRtcEngine_macOS/DRM (4.1.0)
+  - AgoraRtcEngine_macOS/RtcBasic (4.1.0)
+  - AgoraRtcEngine_macOS/SpatialAudio (4.1.0)
+  - AgoraRtcEngine_macOS/VirtualBackground (4.1.0)
+  - AgoraRtcEngine_macOS/VQA (4.1.0)
+  - emoji_picker_flutter (0.0.1):
+    - FlutterMacOS
+  - FlutterMacOS (1.0.0)
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - iris_event (0.0.1):
+    - AgoraIrisEventFlutter_macOS (= 2.0.0)
+    - FlutterMacOS
+  - path_provider_macos (0.0.1):
+    - FlutterMacOS
+  - shared_preferences_macos (0.0.1):
+    - FlutterMacOS
+  - sqflite (0.0.2):
+    - FlutterMacOS
+    - FMDB (>= 2.7.5)
+  - url_launcher_macos (0.0.1):
+    - FlutterMacOS
+
+DEPENDENCIES:
+  - agora_rtc_engine (from `Flutter/ephemeral/.symlinks/plugins/agora_rtc_engine/macos`)
+  - emoji_picker_flutter (from `Flutter/ephemeral/.symlinks/plugins/emoji_picker_flutter/macos`)
+  - FlutterMacOS (from `Flutter/ephemeral`)
+  - iris_event (from `Flutter/ephemeral/.symlinks/plugins/iris_event/macos`)
+  - path_provider_macos (from `Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos`)
+  - shared_preferences_macos (from `Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos`)
+  - sqflite (from `Flutter/ephemeral/.symlinks/plugins/sqflite/macos`)
+  - url_launcher_macos (from `Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos`)
+
+SPEC REPOS:
+  trunk:
+    - AgoraIrisEventFlutter_macOS
+    - AgoraIrisRTC_macOS
+    - AgoraRtcEngine_macOS
+    - FMDB
+
+EXTERNAL SOURCES:
+  agora_rtc_engine:
+    :path: Flutter/ephemeral/.symlinks/plugins/agora_rtc_engine/macos
+  emoji_picker_flutter:
+    :path: Flutter/ephemeral/.symlinks/plugins/emoji_picker_flutter/macos
+  FlutterMacOS:
+    :path: Flutter/ephemeral
+  iris_event:
+    :path: Flutter/ephemeral/.symlinks/plugins/iris_event/macos
+  path_provider_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/path_provider_macos/macos
+  shared_preferences_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/shared_preferences_macos/macos
+  sqflite:
+    :path: Flutter/ephemeral/.symlinks/plugins/sqflite/macos
+  url_launcher_macos:
+    :path: Flutter/ephemeral/.symlinks/plugins/url_launcher_macos/macos
+
+SPEC CHECKSUMS:
+  agora_rtc_engine: 66e8168cc1facc5fffd751021e80fee9031a7f33
+  AgoraIrisEventFlutter_macOS: 5e70ca5f37ccae44efcf8cc0ebd616b60f513263
+  AgoraIrisRTC_macOS: 5bed4136e6f88e54ea3472857a01154fd409dc79
+  AgoraRtcEngine_macOS: 35a0ad69ed2d5fa0632d751f41b09c5c9538ee59
+  emoji_picker_flutter: 533634326b1c5de9a181ba14b9758e6dfe967a20
+  FlutterMacOS: ae6af50a8ea7d6103d888583d46bd8328a7e9811
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  iris_event: f12d7c4b6ee729c4dbd394cd374d9ddb4db56ad4
+  path_provider_macos: 3c0c3b4b0d4a76d2bf989a913c2de869c5641a19
+  shared_preferences_macos: a64dc611287ed6cbe28fd1297898db1336975727
+  sqflite: a5789cceda41d54d23f31d6de539d65bb14100ea
+  url_launcher_macos: 597e05b8e514239626bcf4a850fcf9ef5c856ec3
+
+PODFILE CHECKSUM: 6eac6b3292e5142cfc23bdeb71848a40ec51c14c
+
+COCOAPODS: 1.11.3
