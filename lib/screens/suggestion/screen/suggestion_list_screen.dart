@@ -25,12 +25,16 @@ class SuggestionListScreen extends StatefulWidget {
 class _SuggestionListScreenState extends State<SuggestionListScreen> {
   SuggestionListResponseModel? suggestionListResponseModel;
 
+  bool? isProfileDone;
+
+  bool? isInterestDone;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
 
-    loadData();
+    onInit();
 
     print("_SuggestionListScreenState initial state");
   }
@@ -39,6 +43,53 @@ class _SuggestionListScreenState extends State<SuggestionListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: LayoutBuilder(builder: (context, constraints) {
+        if (isProfileDone == null || isInterestDone == null) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+
+        if (isProfileDone == false || isInterestDone == false) {
+          return Center(
+            child: Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Visibility(
+                        visible: isProfileDone == false,
+                        child: Column(
+                          children: [
+                            Text("* ${"Complete your full profile (all fields) to receive matching suggestions."
+                                    .toTranslated()}"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                          ],
+                        )),
+                    Visibility(
+                        visible: isInterestDone == false,
+                        child: Column(
+                          children: [
+                            Text("* ${'Answer at least three questions under "Interests" for tailored suggestions.'
+                                    .toTranslated()}"),
+                            SizedBox(
+                              height: 8,
+                            ),
+                            Text("* ${'Answer the "Special Requirement" question under "Interests" for better matches.'
+                                    .toTranslated()}"),
+                          ],
+                        ))
+                  ],
+                ),
+              ),
+            ),
+          );
+        }
+
         return suggestionListResponseModel == null
             ? const Center(
                 child: CircularProgressIndicator(),
@@ -238,5 +289,41 @@ class _SuggestionListScreenState extends State<SuggestionListScreen> {
 
       setState(() {});
     }
+  }
+
+  void onInit() async {
+    await loadProfileIsDoneApi();
+    await loadInterestIsDoneApi();
+
+    loadData();
+  }
+
+  loadProfileIsDoneApi() async {
+    //http://dating.paksang.com/is_profile_update_done/143
+    var res = await http.get(Uri.parse(
+        "http://dating.paksang.com/is_profile_update_done/${userInfo["_id"]}"));
+
+    if (res.statusCode == 200) {
+      var data = jsonDecode(res.body);
+      isProfileDone = data["isDone"];
+      print("isProfileDone : ${isProfileDone}");
+      setState(() {});
+    }
+  }
+
+  loadInterestIsDoneApi() {
+    //http://dating.paksang.com/is_interest_update_done/143
+    http
+        .get(Uri.parse(
+            "http://dating.paksang.com/is_interest_update_done/${userInfo["_id"]}"))
+        .then((res) {
+      if (res.statusCode == 200) {
+        var data = jsonDecode(res.body);
+        isInterestDone = data["isDone"];
+
+        print("isInterestDone : ${isInterestDone}");
+        setState(() {});
+      }
+    });
   }
 }

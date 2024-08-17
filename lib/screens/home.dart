@@ -168,7 +168,7 @@ class _HomePageState extends State<HomePage> {
                                             ),
                                           ),
                                         ),
-                                        Padding(
+                                   /*     Padding(
                                           padding:
                                               const EdgeInsets.only(top: 16.0),
                                           child: SizedBox(
@@ -202,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                                                   ),
                                                 ),
                                               )),
-                                        ),
+                                        ),*/
                                       ],
                                     ),
                             );
